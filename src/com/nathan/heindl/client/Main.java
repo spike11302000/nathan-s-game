@@ -47,7 +47,6 @@ public class Main extends JFrame implements ActionListener {
 		String name = e.getActionCommand();
 
 		if (name.equals("Start")) {
-			System.out.println("Start has been pressed");
 			String ip = JOptionPane.showInputDialog("Server ip: ");
 			String port = JOptionPane.showInputDialog("Server port: ");
 			socket.Connect(ip, Integer.parseInt(port));
