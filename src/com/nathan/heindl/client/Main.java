@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.*;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -36,7 +37,7 @@ public class Main extends JFrame implements ActionListener {
 		JButton button2 = new JButton("button2");
 		startButton.addActionListener(this);
 		button2.addActionListener(this);
-
+		setIconImage(new ImageIcon("res/images/icon.png").getImage());
 		add(startButton);
 		add(button2);
 	}
@@ -48,10 +49,8 @@ public class Main extends JFrame implements ActionListener {
 
 		if (name.equals("Start")) {
 			String ip = JOptionPane.showInputDialog("Server ip: ");
-			//String port = JOptionPane.showInputDialog("Server port: ");
 			String[] IP = ip.split(":");
 			socket.Connect(IP[0], Integer.parseInt(IP[1]));
-
 		} else if (name.equals("button2")) {
 			System.out.println("button2 has been pressed");
 
