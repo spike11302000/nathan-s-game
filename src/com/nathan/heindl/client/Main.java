@@ -12,18 +12,22 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import com.nathan.heindl.client.socket.socket;
+import com.nathan.heindl.client.utils.Constants;
 
 public class Main extends JFrame implements ActionListener {
 
-	private int width = 1080;
-	private int height = 720;
-
+	public final static int width = 1080;
+	public final static int height = 720;
+	public static boolean isRunning = true;
 	private static final long serialVersionUID = 1L;
 
 	public static void Client() {
 
 		System.out.println("Starting client");
-		new Main().setVisible(true);
+
+		Main Window = new Main();
+		Window.setVisible(true);
+		GameLoop.gameLoop();
 	}
 
 	private Main() {
@@ -46,7 +50,6 @@ public class Main extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {// this code is executed when
 												// you click the buttons
 		String name = e.getActionCommand();
-
 		if (name.equals("Start")) {
 			String ip = JOptionPane.showInputDialog("Server ip: ");
 			String[] IP = ip.split(":");
