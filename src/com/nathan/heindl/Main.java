@@ -36,7 +36,7 @@ public class Main extends JFrame implements ActionListener{
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {// this code is executed when you click start
+	public void actionPerformed(ActionEvent e) {// this code is executed when you click the buttons
 		String name = e.getActionCommand();
 		
 		if(name.equals("Start")) {
