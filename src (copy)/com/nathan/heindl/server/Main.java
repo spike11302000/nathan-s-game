@@ -16,10 +16,10 @@ public class Main extends Thread {
 		start();
 	}
 
-	public static void main(String[] args) {
-		System.out.println("Startig server on port:" + Integer.parseInt(args[0]));
+	public static void Server(int port) {
+		System.out.println("Startig server on port:" + port);
 		try {
-			serverSocket = new ServerSocket(Integer.parseInt(args[0]));
+			serverSocket = new ServerSocket(port);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

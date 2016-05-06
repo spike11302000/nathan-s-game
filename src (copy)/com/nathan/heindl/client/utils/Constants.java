@@ -4,5 +4,4 @@ public class Constants {
 
 	public final static int width = 1080;
 	public final static int height = 720;
-	public final int scale = 3;
 }
